@@ -38,7 +38,20 @@
             double gallonsUsed = milesAbleToTravel / MilesPerGallon;
             GasTankLevel -= gallonsUsed;
             Odometer += milesAbleToTravel;
+
+
         }
+
+        public void AddGas(int givenGas)
+        {
+         GasTankLevel = (GasTankLevel + givenGas) > GasTankSize ? +givenGas 
+         :throw new System.Exception("Cannot hold that much");
+        }
+
+
+
+
+
 
     }
 }
